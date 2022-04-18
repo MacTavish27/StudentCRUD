@@ -1,0 +1,170 @@
+﻿<Window x:Class="Crud.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Crud.UI"
+        mc:Ignorable="d"
+        Title="Student Crud Application" Height="450" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"></ColumnDefinition>
+            <ColumnDefinition Width="28.261"></ColumnDefinition>
+            <ColumnDefinition Width="321.739"/>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="270"></ColumnDefinition>
+            <ColumnDefinition Width="25"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="217*"></RowDefinition>
+            <RowDefinition Height="167*"/>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="2" Grid.ColumnSpan="2" Margin="0,167,0,0" Grid.RowSpan="2"
+            />
+
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="250"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="25"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="25"></RowDefinition>
+                    <RowDefinition Height="25"></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+                <Label
+                    Content="Student ID"
+                    Grid.Row="0"
+                     Grid.Column="0" >
+                </Label>
+
+                <TextBox      
+                    x:Name="txtStudentID"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    VerticalContentAlignment="Center"
+                 />
+
+
+                <Label
+                    Content="Student name"
+                    Grid.Row="2"
+                     Grid.Column="0" >
+                </Label>
+
+                <TextBox      
+                    x:Name="txtStudent"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    VerticalContentAlignment="Center"
+                 />
+
+
+                <Label
+                    Content="Course"
+                    Grid.Row="4"
+                     Grid.Column="0" >
+                </Label>
+
+                <TextBox      
+                    x:Name="txtCourse"
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    VerticalContentAlignment="Center"
+                 />
+
+                <!--Button-->
+                <StackPanel
+                     Grid.Row="5"
+                     Grid.ColumnSpan="2"
+                     Orientation="Horizontal" Margin="0,35,0,-35"
+                    >
+
+                    <Button
+                        Width="50"
+                        Content="Add"
+                        x:Name="ButtonAdd"
+                        Margin="10 0 10 0"
+                        Click="ButtonAdd_Click"
+                        />
+
+                    <Button
+                        Width="50"
+                        Content="Update"
+                        x:Name="ButtonEdit"
+                        Margin="10 0 10 0"
+                        />
+                    <Button
+                        Width="50"
+                        Content="Search"
+                        x:Name="ButtonSearch"
+                        Margin="10 0 10 0"
+                        />
+                    <Button
+                        Width="50"
+                        Content="Delete"
+                        x:Name="ButtonDelete"
+                        Margin="10 0 10 0"
+                        />
+                    <Button
+                        Width="50"
+                        Content="List"
+                        x:Name="ButtonList"
+                        Margin="10 0 10 0"
+                      
+                        />
+                </StackPanel>
+
+             
+
+
+            </Grid>
+
+        </StackPanel>
+
+        <DataGrid
+            Grid.Column="4"
+            Grid.Row="1"
+            x:Name="DataGridBrand"
+            Margin="5,5,-99,5"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            ColumnWidth="*"
+            CanUserAddRows="False"
+            CanUserReorderColumns="False"
+            CanUserResizeRows="False">
+        </DataGrid>
+
+        <Grid Grid.Row="3" Grid.ColumnSpan="4" >
+            <ProgressBar Minimum="0"
+                         Maximum="100"
+                         Visibility="Collapsed"
+                         Height="12"
+                         Width="250"
+                         Margin="20 -50 0 10"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         x:Name="progressBar"/>
+        </Grid>
+
+    </Grid>
+
+</Window>
